@@ -11,7 +11,7 @@ const Hero = () => {
             </HeroBG>
             <HeroContent>
                 <HeroItems>
-                    <HeroH1>Love+Happiness</HeroH1>
+                    <HeroH1>Love&amp;Happiness</HeroH1>
                     <HeroP>We will love your pets as much as you do!</HeroP>
                     <Button primary="true" big="true" round="true" to="/services">Book us now!</Button>
                 </HeroItems>

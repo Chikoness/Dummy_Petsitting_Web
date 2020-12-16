@@ -32,7 +32,7 @@ const Services = ({heading}) => {
         data.allServicesJson.edges.forEach((item, index) =>  {
             servicesArray.push(
                 <ServicesCard key={index}>
-                    <ServicesImg src={item.node.img.childImageSharp.fluid.src} fluid={item.node.img.childImageSharp.fluid} alt={item.node.alt} />
+                    <ServicesImg fluid={item.node.img.childImageSharp.fluid} alt={item.node.alt} />
                     <ServicesInfo>
                         <TextWrap>
                             <ServicesTitle>{item.node.name}</ServicesTitle>

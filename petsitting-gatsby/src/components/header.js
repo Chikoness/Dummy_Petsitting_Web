@@ -4,11 +4,12 @@ import styled from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu'
 import { menuData } from "../data/MenuData"
 import { Button } from "./button"
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 const Header = () => {
   return (
     <Nav>
-      <NavLink to="/">L+H</NavLink>
+      <NavLink to="/">L<FavoriteBorderIcon />H</NavLink>
       <Hamburger />
       <NavMenu>
         {menuData.map((item, index) => (
