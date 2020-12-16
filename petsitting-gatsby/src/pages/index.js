@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import Services from "../components/services"
 import Sitting from "../components/sitting"
+import Book from "../components/book"
 
 const IndexPage = () => (
   <Layout>
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <Hero />
     <Services heading="What We Offer"/>
     <Sitting />
+    <Book />
   </Layout>
 )
 
