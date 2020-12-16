@@ -12,11 +12,11 @@ export const Button = styled(Link)`
     min-width: 100px;
     cursor: pointer;
     text-decoration: none;
-    transition: 0.3s !important;
+    transition: 0.1s !important;
     border-radius: ${({round}) => (round ? '50px' : 'none')};
 
     &:hover {
         background: ${({primary}) => (primary ? '#077BF1' : '#f26A2E')};
-        transform: translateY(-2px);
+        transform: scale(1.02);
     }
 `;
