@@ -1,0 +1,26 @@
+[
+    {
+        "img": "../assets/images/dogs.jpg",
+        "alt": "Dogsitting",
+        "name": "Dogsitting",
+        "button": "View Service"
+    },
+    {
+        "img": "../assets/images/cats.jpg",
+        "alt": "Catsitting",
+        "name": "Catsitting",
+        "button": "View Service"
+    },
+    {
+        "img": "../assets/images/smallanimals.jpg",
+        "alt": "Small animals sitting",
+        "name": "Small animals sitting",
+        "button": "View Service"
+    },
+    {
+        "img": "../assets/images/reptiles.jpg",
+        "alt": "Reptilesitting",
+        "name": "Reptilesitting",
+        "button": "View Service"
+    }
+]
