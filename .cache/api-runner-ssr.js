@@ -1,11 +1,11 @@
 var plugins = [{
-      plugin: require('/home/charlene/Documents/Dev/WhimsicalWeb/petsitting/petsitting-gatsby/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/home/charlene/Documents/Dev/WhimsicalWeb/petsitting/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/home/charlene/Documents/Dev/WhimsicalWeb/petsitting/petsitting-gatsby/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      plugin: require('/home/charlene/Documents/Dev/WhimsicalWeb/petsitting/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"transpileTemplateLiterals":true,"pure":false},
     },{
-      plugin: require('/home/charlene/Documents/Dev/WhimsicalWeb/petsitting/petsitting-gatsby/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/home/charlene/Documents/Dev/WhimsicalWeb/petsitting/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/gatsby-icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":null},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

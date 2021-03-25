@@ -47,7 +47,7 @@ const Services = ({heading}) => {
     }
 
     return (
-        <ServicesContainer>
+        <ServicesContainer id="services">
             <ServicesHeading>{heading}</ServicesHeading>
             <ServicesWrapper>{getServices(data)}</ServicesWrapper>
         </ServicesContainer>

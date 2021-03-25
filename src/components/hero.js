@@ -5,7 +5,7 @@ import Video from '../assets/videos/pet-1.mp4'
 
 const Hero = () => {
     return (
-        <HeroContainer>
+        <HeroContainer id="about">
             <HeroBG>
                 <VideoBG src={Video} type="video/mp4" autoPlay loop muted playsInline/>
             </HeroBG>
@@ -13,7 +13,7 @@ const Hero = () => {
                 <HeroItems>
                     <HeroH1>Love&amp;Happiness</HeroH1>
                     <HeroP>We will love your pets as much as you do!</HeroP>
-                    <Button primary="true" big="true" round="true" to="/services">Book us now!</Button>
+                    <Button primary="true" big="true" round="true" to="#services">Book us now!</Button>
                 </HeroItems>
             </HeroContent>
         </HeroContainer>

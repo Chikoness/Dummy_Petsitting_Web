@@ -4,7 +4,7 @@ import { Button } from './button'
 
 const Book = () => {
     return (
-        <BookingContainer>
+        <BookingContainer id="contact">
             <BookingContent>
                 <h1>Contact</h1>
                 <p>Pick a date and book us now!</p>
