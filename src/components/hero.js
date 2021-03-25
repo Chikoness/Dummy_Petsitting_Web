@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button } from './button'
-import Video from '../assets/videos/pet-1.mp4'
+import heroImage from '../assets/images/hero-image.jpg'
 
 const Hero = () => {
     return (
         <HeroContainer id="about">
             <HeroBG>
-                <VideoBG src={Video} type="video/mp4" autoPlay loop muted playsInline/>
+                <ImageBG src={heroImage} />
             </HeroBG>
             <HeroContent>
                 <HeroItems>
@@ -56,7 +56,7 @@ const HeroBG = styled.div`
     overflow: hidden;
 `;
 
-const VideoBG = styled.video`
+const ImageBG = styled.img`
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
