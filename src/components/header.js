@@ -2,6 +2,7 @@ import { Link, animateScroll } from "react-scroll"
 import React from "react"
 import styled from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu'
+import CloseIcon from '@material-ui/icons/Close'
 import { menuData } from "../data/MenuData"
 import { Button } from "./button"
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
@@ -10,11 +11,13 @@ const toggleHome = () => {
   animateScroll.scrollToTop();
 }
 
-const Header = () => {
+const Header = ({ click, toggle }) => {
   return (
     <Nav>
-      <NavLink onClick={toggleHome}>L<FavoriteBorderIcon />H</NavLink>
-      <Hamburger />
+      <HomeLink onClick={toggleHome}>L<FavoriteBorderIcon />H</HomeLink>
+      <Hamburger onClick={toggle}>
+        {click ? <CloseIcon /> : <MenuIcon />}
+      </Hamburger>
       <NavMenu>
         {menuData.map((item, index) => (
           <NavLink to={item.link} key={index} smooth={true}
@@ -36,7 +39,7 @@ const Header = () => {
 export default Header
 
 const Nav = styled.nav`
-  background: linear-gradient(180deg, grey 10%, transparent 100%);
+  background: rgba(0,0,0,0.8);
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -44,6 +47,16 @@ const Nav = styled.nav`
   z-index: 100;
   position: sticky;
   top: 0;
+`
+
+const HomeLink = styled.div`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
 `
 
 const NavLink = styled(Link)`
@@ -60,20 +73,21 @@ const NavLink = styled(Link)`
   }
 `
 
-const Hamburger = styled(MenuIcon)`
+const Hamburger = styled.div`
+  display: none;
   visibility: hidden;
-  color: #fff;
 
-  @media screen and (max-width: 768px) {
-    visibility: visible;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-weight: bolder;
-    cursor: pointer;
-  }
+    @media screen and (max-width: 768px) {
+        visibility: visible;
+        display: block;
+        position: absolute;
+        top: -5px;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        color: #fff;
+        cursor: pointer;
+    }
 `
 
 const NavMenu = styled.div`
