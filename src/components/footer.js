@@ -69,6 +69,7 @@ const FooterDesc = styled.div`
 `;
 
 const FooterWrap = styled.div`
+    padding: 3rem 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 `;

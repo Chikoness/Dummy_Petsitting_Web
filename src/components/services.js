@@ -37,7 +37,7 @@ const Services = ({heading}) => {
                         <TextWrap>
                             <ServicesTitle>{item.node.name}</ServicesTitle>
                         </TextWrap>
-                        <Button to="/services" primary="true" round="true" css={`position:absolute; top:420px; font-size:14px;`}>{item.node.button}</Button>
+                        <Button to="#services" primary="true" round="true" css={`position:absolute; top:420px; font-size:14px;`}>{item.node.button}</Button>
                     </ServicesInfo>
                 </ServicesCard>
             )
@@ -49,7 +49,9 @@ const Services = ({heading}) => {
     return (
         <ServicesContainer id="services">
             <ServicesHeading>{heading}</ServicesHeading>
-            <ServicesWrapper>{getServices(data)}</ServicesWrapper>
+            <ServicesWrapper>
+                {getServices(data)}
+            </ServicesWrapper>
         </ServicesContainer>
     )
 }

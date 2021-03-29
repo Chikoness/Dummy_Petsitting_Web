@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link, animateScroll } from "react-scroll"
 import React from "react"
 import styled from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu'
@@ -6,14 +6,22 @@ import { menuData } from "../data/MenuData"
 import { Button } from "./button"
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
+const toggleHome = () => {
+  animateScroll.scrollToTop();
+}
+
 const Header = () => {
   return (
     <Nav>
-      <NavLink to="/">L<FavoriteBorderIcon />H</NavLink>
+      <NavLink onClick={toggleHome}>L<FavoriteBorderIcon />H</NavLink>
       <Hamburger />
       <NavMenu>
         {menuData.map((item, index) => (
-          <NavLink to={item.link} key={index}>
+          <NavLink to={item.link} key={index} smooth={true}
+            duration={500}
+            spy={true}
+            exact='true'
+            offset={-80}>
             {item.title}
           </NavLink>
         ))}
@@ -28,13 +36,14 @@ const Header = () => {
 export default Header
 
 const Nav = styled.nav`
-  background: transparent;
+  background: linear-gradient(180deg, grey 10%, transparent 100%);
   height: 80px;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1300px) / 2);
   z-index: 100;
-  position: relative;
+  position: sticky;
+  top: 0;
 `
 
 const NavLink = styled(Link)`
@@ -45,6 +54,10 @@ const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+
+  &.active {
+    border-bottom: 3px solid #FFF;
+  }
 `
 
 const Hamburger = styled(MenuIcon)`
